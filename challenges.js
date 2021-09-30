@@ -32,7 +32,7 @@ async function openBrowser(url){
 const tabs = await browser.pages();
 const tab = tabs[0];
 await tab.goto(url);
-let usernameinput = await tab.$("#input-1");
+let usernameinput = await tab.$("#input-1"); 
 let passwordinput = await tab.$("#input-2");
 let rememberinput = await tab.$(".checkbox-input");
 let loginclick = await tab.$('[data-analytics="LoginPassword"]');
@@ -50,7 +50,7 @@ let loginclick = await tab.$('[data-analytics="LoginPassword"]');
                                         visible : true
                                    })
                                  let profilebut = await tab.$('[data-analytics="NavBarProfileDropDown"]');
-                                   await profilebut.click();
+                                await profilebut.click();
                                 let adminisclick = await tab.$('[data-analytics="NavBarProfileDropDownAdministration"]');
                                 await adminisclick.click();
                                 await tab.waitForNavigation({waitUntil : "networkidle2"});
